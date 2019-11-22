@@ -26,11 +26,12 @@
     <!-- Current Train Schedule -->
     <table class="table">
         <thead>
+            <h2>Current Train Schedule</h1>
             <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
+                <th scope="col">Train Name</th>
+                <th scope="col">Destination</th>
+                <th scope="col">Frequency (min)</th>
+                <th scope="col">Next Arrival</th>
             </tr>
         </thead>
         <tbody>
@@ -57,20 +58,27 @@
     
     <!-- Submit form to add new trains -->
     <form>
-        <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="Enter email">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        <h2>Add Train</h2>
+        <div class="form-group" id="form-group-1">
+            <label for="trainName">Train Name</label>
+            <input type="input" class="form-control" id="destination" placeholder="">
         </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    
+        <div class="form-group" id="form-group-2">
+            <label for="Destination">Destination</label>
+            <input type="input" class="form-control" id="trainName" placeholder="">
         </div>
-        <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    
+        <div class="form-group" id="form-group-3">
+            <label for="first-train-time">First Train Time (military time)</label>
+            <input type="input" class="form-control" id="first-train-time" placeholder="">
         </div>
+    
+        <div class="form-group" id="form-group-4">
+            <label for="frequency">Frequency</label>
+            <input type="input" class="form-control" id="frequency" placeholder="">
+        </div>
+    
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 
