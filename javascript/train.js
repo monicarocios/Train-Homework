@@ -12,19 +12,34 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 var database = firebase.database();
-var clickCounter = 0;
 
-$('#clickButton').on('click', function(){
-    clickCounter++;
-    database.ref().set({
-        clickCount : clickCounter
-    });
-    
+var trainName = "";
+var destination = "";
+var firstTime = "";
+var frequency = 0;
+
+
+// add new row with train info every time click submit
+$(".btn btn-primary").on('click', function (event) {
+    event.preventDefault();
+
+
+    trainName = $("#trainName").val().trim();
+    destination = $("#destination").val().trim();
+    firstTime = $("#first-train-time").val().trim();
+    frequency = $("#frequency").val().trim();
+
+    console.log(trainName);
+
+    var addRow = $("<tr>");
+    addRow.append($("<td>" + trainName + "</td>"));
+    addRow.append($("<td>" + destination + "</td>"));
+    addRow.append($("<td>" + firstTime + "</td>"));
+    addRow.append($("<td>" + frequency + "</td>"));
+
 });
 
-database.ref().on('value', function(snapshot){
-    $('#clickValue').html(snapshot.val().clickCount);
-})
+
 
 
 

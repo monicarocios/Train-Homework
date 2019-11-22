@@ -36,23 +36,24 @@
         </thead>
         <tbody>
             <tr>
-                <th scope="row">1</th>
+                <td>Travis</td>
                 <td>Mark</td>
                 <td>Otto</td>
                 <td>@mdo</td>
             </tr>
             <tr>
-                <th scope="row">2</th>
+                <td>Travis</td>
                 <td>Jacob</td>
                 <td>Thornton</td>
                 <td>@fat</td>
             </tr>
             <tr>
-                <th scope="row">3</th>
+                <td>Travis</td>
                 <td>Larry</td>
                 <td>the Bird</td>
                 <td>@twitter</td>
             </tr>
+            <td class="col-sm-2"><a class="deleteRow"></a>
         </tbody>
     </table>
     
@@ -61,27 +62,28 @@
         <h2>Add Train</h2>
         <div class="form-group" id="form-group-1">
             <label for="trainName">Train Name</label>
-            <input type="input" class="form-control" id="destination" placeholder="">
+            <input type="text" class="form-control" id="trainName" placeholder="">
         </div>
     
         <div class="form-group" id="form-group-2">
             <label for="Destination">Destination</label>
-            <input type="input" class="form-control" id="trainName" placeholder="">
+            <input type="text" class="form-control" id="destination" placeholder="">
         </div>
     
         <div class="form-group" id="form-group-3">
             <label for="first-train-time">First Train Time (military time)</label>
-            <input type="input" class="form-control" id="first-train-time" placeholder="">
+            <input type="text" class="form-control" id="first-train-time" placeholder="">
         </div>
     
         <div class="form-group" id="form-group-4">
             <label for="frequency">Frequency</label>
-            <input type="input" class="form-control" id="frequency" placeholder="">
+            <input type="text" class="form-control" id="frequency" placeholder="">
         </div>
     
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 
+    <script src="https://momentjs.com/downloads/moment.min.js"></script>
     <script type="text/javascript" src="./javascript/train.js"></script>
 </body>
 
