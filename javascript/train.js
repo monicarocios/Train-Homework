@@ -61,41 +61,17 @@ database.ref().on("value", function (snapshot) {
     console.log(snapshot.val().frequency);
     console.log(snapshot.val().nextArrival);
 
+    // reflect snapshot in html, add new row to Train Schedule
+    let newrow = $("<tr>");
+    newrow.append("<td>" + snapshot.val().trainName + "</td>");
+    newrow.append("<td>" + snapshot.val().destination + "</td>")
+    newrow.append("<td>" + snapshot.val().frequency + "</td>")
+    newrow.append("<td>" + snapshot.val().nextArrival + "</td>")
+
+    $("#train-table").append(newrow);
+    
 });
 
-//   // Change the HTML to reflect
-//   $("#name-display").text(snapshot.val().name);
-//   $("#email-display").text(snapshot.val().email);
-//   $("#age-display").text(snapshot.val().age);
-//   $("#comment-display").text(snapshot.val().comment);
-
-//   // Handle the errors
-// }, function(errorObject) {
-//   console.log("Errors handled: " + errorObject.code);
-// });
-
-
-
-
-// add new row with train info every time click submit
-$("#submitBtn").on('click', function (event) {
-    event.preventDefault();
-
-
-    trainName = $("#trainName").val().trim();
-    destination = $("#destination").val().trim();
-    firstTime = $("#first-train-time").val().trim();
-    frequency = $("#frequency").val().trim();
-
-    console.log(trainName);
-
-    var addRow = $("<tr>");
-    addRow.append($("<td>" + trainName + "</td>"));
-    addRow.append($("<td>" + destination + "</td>"));
-    addRow.append($("<td>" + firstTime + "</td>"));
-    addRow.append($("<td>" + frequency + "</td>"));
-
-});
 
 
 
