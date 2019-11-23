@@ -49,6 +49,7 @@ $("#submitBtn").on("click", function (event) {
         nextArrival: nextArrival,
     });
 
+    document.getElementById("form").reset();
 });
 
 // Firebase watcher + initial loader HINT: .on("value")
